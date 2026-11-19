@@ -1,0 +1,28 @@
+settings:
+  window_hours: 24
+  timezone: Europe/London
+  max_items_per_topic: 25
+  max_bullets_per_topic: 5
+  seen_retention_days: 14
+  ntfy:
+    priority: 3
+    markdown: false
+    inter_message_delay_seconds: 1
+  models:
+    openai: gpt-6-luna
+    anthropic: ""
+
+feeds:
+  - id: bbc-world
+    url: https://feeds.bbci.co.uk/news/world/rss.xml
+  - id: bbc-tech
+    url: https://feeds.bbci.co.uk/news/technology/rss.xml
+
+topics:
+  - name: World news
+    keywords: [world, international, conflict, election, government]
+    feeds: [bbc-world]
+  - name: Technology
+    tag: computer
+    keywords: [technology, AI, software, cybersecurity, smartphone]
+    feeds: [bbc-tech]

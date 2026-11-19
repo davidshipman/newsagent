@@ -1,0 +1,1 @@
+"""Daily RSS briefing."""

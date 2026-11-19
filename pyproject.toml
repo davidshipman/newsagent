@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "daily-news-briefing"
+version = "0.1.0"
+description = "A scheduled RSS news briefing delivered through ntfy"
+requires-python = ">=3.11"
+dependencies = ["feedparser>=6.0.11", "httpx>=0.27", "PyYAML>=6.0", "python-dotenv>=1.0", "openai>=1.30", "anthropic>=0.30"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
